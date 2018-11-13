@@ -2,9 +2,10 @@
 
 This repository is a central site for linking to shared repositories of the orofacial U19 (Kleinfeld PI)
 
-## Code Repositories
+## Code and Document Repositories
 
 * [UCSD Active Brain Atlas Repo](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev)
+* [Wang lab shared files](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files)
 
 ## Data Repositories
 

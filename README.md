@@ -1,6 +1,6 @@
 # Orofacial_Collaboration
 
-This repository is a central site for linking to shared repositories of the orofacial U19 (Kleinfeld PI)
+This repository is a directory of code and data repositories of the orofacial U19.
 
 ## Code and Document Repositories
 

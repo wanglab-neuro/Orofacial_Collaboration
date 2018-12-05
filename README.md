@@ -15,3 +15,8 @@ This repository is a directory of code and data repositories of the orofacial U1
 * UCSD Active Brain Atlas birdstore storage (Kleinfeld Lab local server)
     * Raw Data: `/nfs/birdstore-brainbucket1/Active_Atlas_Data/[SCANNER_NAME]/`
     * Processed Data: `/nfs/birdstore-brainbucket1/Active_Atlas_Data/data_root/CSHL_data_processed/`
+
+## Demos
+
+### Atlas Project
+* [Annotation Software Video Demonstrations on Dropbox](https://www.dropbox.com/sh/ug683gbt50h41bt/AABHvQPstbbvla6zoLz0JQU4a?dl=0)

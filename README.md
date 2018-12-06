@@ -4,9 +4,11 @@ This repository is a directory of code and data repositories of the orofacial U1
 
 ## Code and Document Repositories
 
-* [UCSD Active Brain Atlas Repo](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev)
-* [UCSD/Datajoint Interface Repo](https://github.com/ActiveBrainAtlas/Datajoint_Interface)
-* [Wang lab shared files](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files)
+* [Kleinfeld lab: Active Brain Atlas Repo](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev)
+* [Datajoint Interface Repo](https://github.com/ActiveBrainAtlas/Datajoint_Interface)
+* [Wang lab: shared files](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files)
+* [Karel lab: Mesoscale Activity Map Github](https://github.com/mesoscale-activity-map)
+* [Karel lab: Mesoscale Activity Map pipeline document](https://docs.google.com/document/d/1oyQkLSiOoIO6xXY3yD5Y3h6RRNo_RuHU13DBsSPUKOc/edit#heading=h.3njo67guvukt)
 
 ## Data Repositories
 
@@ -19,7 +21,7 @@ This repository is a directory of code and data repositories of the orofacial U1
 * UCSD Active Brain Atlas birdstore storage (Kleinfeld Lab local server)
    * Raw Data: `/nfs/birdstore-brainbucket1/Active_Atlas_Data/[SCANNER_NAME]/`
    * Processed Data: `/nfs/birdstore-brainbucket1/Active_Atlas_Data/data_root/CSHL_data_processed/`
-
+   
 ## Demos
 
 ### Atlas Project

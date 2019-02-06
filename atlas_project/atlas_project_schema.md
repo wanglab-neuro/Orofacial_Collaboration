@@ -1,3 +1,3 @@
 Test
 
-![Image](https://defenders.org/sites/default/files/styles/large/public/dolphin-kristian-sekulic-isp.jpg)
+![Image](images/atlas_schema_v2.png)

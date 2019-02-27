@@ -5,6 +5,7 @@ This repository is a directory of code and data repositories of the orofacial U1
 ## Code and Document Repositories
 
 * [Kleinfeld lab: Active Brain Atlas Repo](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev)
+* [Kleinfeld lab: Shapeology Project](https://github.com/yoavfreund/shapeology_code)
 * [Datajoint Interface Repo](https://github.com/ActiveBrainAtlas/Datajoint_Interface)
 * [Wang lab: shared files](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files)
 * [Karel lab: Mesoscale Activity Map Github](https://github.com/mesoscale-activity-map)

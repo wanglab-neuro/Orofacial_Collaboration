@@ -3,8 +3,8 @@
 This repository is a directory of code and data repositories of the orofacial U19.
 
 ## Code and Document Repositories
-
-* [Kleinfeld lab: Active Brain Atlas Repo](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev)
+* **Kleinfeld Lab**
+    * [Kleinfeld lab: Active Brain Atlas Repo](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev)
     * [In Depth Description of Active Atlas Pipeline Scripts and Outputs](https://github.com/ActiveBrainAtlas/MouseBrainAtlas_dev/blob/master/doc/running_scripts.md#preprocess-setup)
     * [Yoav Freund: Shapeology Project](https://github.com/yoavfreund/shapeology_code) using low-D manifolds to define shape descriptors.
 * [Datajoint Interface Repo](https://github.com/ActiveBrainAtlas/Datajoint_Interface)

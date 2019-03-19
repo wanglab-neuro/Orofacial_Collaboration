@@ -1,4 +1,4 @@
-## Schema Description (common_atlas_v2)
+## Schema Description (common_atlas_v3)
 
 Pipeline begins with relevant mouse metadata and a single key as the name. Each mouse can have multiple injections, and finally a single perfusion before the brain is extracted. The Histology field contains information about the slices made into the brain. These tables concern the preparation of the physical brain and the fields are agreed upon by those who actually prepare the brains, overseen by Beth Friedman. These tables all require manual input.
 

@@ -1,62 +1,40 @@
-## Graphical representation of current schema (common_atlas_v2)
+## Current schema (conrad_schema)
 
-Pipeline begins with relevant mouse metadata and a single key as the name. Each mouse can have multiple injections, and finally a single perfusion before the brain is extracted. The Histology field contains information about the slices made into the brain. These tables concern the preparation of the physical brain and the fields are agreed upon by those who actually prepare the brains, overseen by Beth Friedman. These tables all require manual input.
+This pipeline involves performing behavioral research on mice while imaging neurons, then automatically processing the data. The pipeline begins with manually recording metadata on each mouse as described below in the `Mouse` table. Each behavioral experiment is overseen by an experimenter who's name is also manually recorded. During the actual experiment, the mouse is hooked up to a two-photon microscope and movies are taken and recorded along with relevant behavioral information in the `Session` table. 
 
-The following "BrainStack" table, and subtables "RawSlices" and "ProcessedSlices" encompass the computational side of the pipeline. "BrainStack" contains all needed metainformation on a stack before being entered into the atlas pipeline. The slice subtables contain information on where image files are stored on my butt for easy retrieval.
+The remaining `Behavior` and `Imaging` tables perform automatic processing on all previous tables using Datajoint's populate functionality. A series of functions are called to analyze the data and store experimentally relevant information including segmented regions of interest, extracted calcium imaging signals, and statistics of the mouse's licking behavior.
 
 ![Image](images/conrad_schema_long.png)
 
-## All current stacks
-
-Information on how to access all tables in the database as well as download all images from AWS S3 can be found [in this Jupyter Notebook.](https://github.com/ActiveBrainAtlas/Datajoint_Interface/blob/master/project_schemas/atlas_schema_python/Accessing%20Atlas%20Data_v2.ipynb)
-
-Entries in all tables can be easily viewed by registered users using [Helium](http://ucsd-demo-helium.datajoint.io/login?from_user=alex&from_host=ucsd-demo-db.datajoint.io&from_path=%2Ftables%2Fcommon_u19_database%2Fbrain) hosted at `ucsd-demo-db.datajoint.io`.
-
-## Table fields (as of v2)
+## Table fields
 
 - Mouse
-  - date_of_birth  : date          # (date) the mouse's date of birth
-  - sex            : enum('M','F') # (M/F) either 'M' for male, 'F' for female
-  - genotype       : varchar(10)   # (Str) indicating the genotype
-  - weight         : double        # (int) weight of the mouse in grams. -1 if unknown
-  - bred           : varchar(20)   # (Str) Vendor where the mouse was bred (bred in house, purchased by vendor)
+  - dob                  : date                         # Date of birth
+  - iacuc_barcode        : bigint unsigned              # The IACUC barcode on the cage
+  - sex="M"              : enum('M','F')                # The mouse gender
+  - genotype="C57/Bl6"   : varchar(1000)                # The mouse strain
 
-- Injection
-  - injection_date  : date          # (date) what day was the injection performed
-  - injection_type  : varchar(30)   # (Str) what kind of tracer/injection (flourescent?)
-  - injection_length: int           # UNSURE. Assumed: the length of time the virus was allowed to propagate
-  - assessment=''   : varchar(1000) # (Str) qualitative assessment of injection
-    
-- Perfusion
-  - injection_date  : date          # (date) what day was the injection performed
-  - post_fixation_condition_hours : int   # (int) How long kept in fix (overnight)
-  - date_frozen    : date     # (date) The date the brain was frozen
-  - date_sectioned : date     # (date) The date the brain was sectioned
-  - injection_type  : varchar(30)   # (Str) what kind of tracer/injection
-  - perfusion_lab   : varchar(30)   # (Str) Which lab perfused the mouse? This lab also kept the mouse
-  - assessment=''   : varchar(1000) # (Str) optional, qualitative assessment of injection
+- Person
+  - full_name            : varchar(30)                  
 
-- Histology
-  - region         : varchar(10)    # (Str) ?
-  - thickness      : int            # (int) thickness of each slice in microns
-  - orientation    : enum('sagittal','coronal','horozontal')    # (Str) horizontal, sagittal, coronal
-  - counter_stain  : varchar(30)    # (Str) what stain was used on the brain (thionin or NeuroTrace)
-  - lab            : varchar(20)    # (Str) Which lab did the histology
-  - series         : enum('all','every other','unknown') # Every section OR alternate sections
+- Session
+  - path_to_tiff         : varchar(1000)                # Two photon tiff file
+  - path_to_adi          : varchar(1000)                # Labchart file with behavioural data
+  - adi_trial_num        : tinyint                      # The session number in the adicht file associated with this session
+  - session_date         : date                         # The date of the session
+  - type                 : enum('naive','fbd1','fbd2','post') # The type of experimental trial
+  - notes                : varchar(10000)               # Notes for the session
 
-- BrainStack
-  - stack_name       : varchar(10)   # (Str) unique designation for each mouse
-  - num_slices       : int           # (int) total number of histology slices
-  - num_valid_slices : int 
-  - channels         : int           # (int) number of channels for each slice
-  - sorted_filenames : varchar(50000)# (Str) the sorted_filenames.txt file for each brain
-  - human_annotated  : boolean       # (bool) does this stack have human annotations
-  - planar_resolution_um : double    # (double) 0.325 for AxioScanner, 0.46 from CSHL
-  - section_thickness_um : double    # (double) typically 20um
-  - unique index (stack_name)   # Adds constraint, stack name must be unique accross brains
-  - __ProcessedSlices__
-    - aws_bucket : varchar(40)     # (Str) the name of the bucket the files are stored on
-    - raw_stack  : varchar(50000)  # (Str) a sequence of each filepath of files stored on S3 seperated by '|'
-  - __RawSlices__
-    - aws_bucket : varchar(40)     # (Str) the name of the bucket the files are stored on
-    - processed_stack  : varchar(50000)  # (Str) a sequence of each filepath of files stored on S3 seperated by '|'
+- Behavior
+  - lick_freq            : longblob                     # The frequency of licks (Hz)
+  - ang_vel              : longblob                     # The angular velocity of running (deg/s)
+  - t                    : longblob                     # The time from start of imaging session (s)
+
+- Imaging
+  - roi_img              : longblob                     # The ROI used for calculating the fluorescence traces
+  - yfp                  : longblob                     # The YFP fluorescence trace (dF/F)
+  - cfp                  : longblob                     # The CFP fluorescence trace (dF/F)
+  - fret                 : longblob                     # The FRET signal (dR/R = yfp/cfp - 1)
+  - thresh               : longblob                     # The reward threshold for the FRET signal
+  - t                    : longblob                     # The time from the start of the imaging session
+  - si                   : longblob                     # The scanimage property structure

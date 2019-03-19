@@ -1,4 +1,4 @@
-## Current schema (conrad_schema)
+## Schema Description (conrad_schema)
 
 This pipeline involves performing behavioral research on mice while imaging neurons, then automatically processing the data. The pipeline begins with manually recording metadata on each mouse as described below in the `Mouse` table. Each behavioral experiment is overseen by an experimenter who's name is also manually recorded. During the actual experiment, the mouse is hooked up to a two-photon microscope and movies are taken and recorded along with relevant behavioral information in the `Session` table. 
 

@@ -16,10 +16,13 @@ This repository is a directory of code and data repositories of the orofacial U1
 ## Datajoint Schemas
 
 * [Datajoint Interface Repo](https://github.com/ActiveBrainAtlas/Datajoint_Interface) contains code and documentation for workflows using the DataJoint server and API. The major users of Data are Alex Newberry and Conrad Foo in the Kleinfeld Lab, and Vincent Provosto in the Wang Lab.
-   * [Active Atlas Schema](https://github.com/ActiveBrainAtlas/Orofacial_Collaboration/blob/master/atlas_project/README.md)
-   * [Conrad Schema](https://github.com/ActiveBrainAtlas/Orofacial_Collaboration/blob/master/atlas_project/Conrad_Schema.md)
-   * [Vincent Schema](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files)
-  
+   * [Active Atlas Schema Description](https://github.com/ActiveBrainAtlas/Orofacial_Collaboration/blob/master/atlas_project/README.md)
+      * [Atlas Database Creation Code](https://github.com/ActiveBrainAtlas/Datajoint_Interface/blob/master/project_schemas/atlas_schema_python_v3/creator_atlas_v3.ipynb)
+   * [Conrad Schema Description](https://github.com/ActiveBrainAtlas/Orofacial_Collaboration/blob/master/atlas_project/Conrad_Schema.md)
+      * [Conrad Database Creation Code](https://github.com/ActiveBrainAtlas/Datajoint_Interface/tree/master/project_schemas/conrad_schema_matlab/%2Bctest)
+   * [Vincent Schema Description](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files)
+      * [Vincent Database Creation Code](https://github.com/wanglab-duke/Orofacial_U19_Shared_Files/blob/master/wanglab.py)
+      
 ## Data Repositories
 
 ### Atlas Project

@@ -4,6 +4,8 @@ This pipeline involves performing behavioral research on mice while imaging neur
 
 The remaining `Behavior` and `Imaging` tables perform automatic processing on all previous tables using Datajoint's populate functionality. A series of functions are called to analyze the data and store experimentally relevant information including segmented regions of interest, extracted calcium imaging signals, and statistics of the mouse's licking behavior.
 
+[Link](https://github.com/ActiveBrainAtlas/Datajoint_Interface/tree/master/project_schemas/conrad_schema_matlab/%2Bctest) to the files where the tables are defined.
+
 ![Image](images/conrad_schema_long.png)
 
 ## Table fields

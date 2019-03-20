@@ -4,6 +4,8 @@ Pipeline begins with relevant mouse metadata and a single key as the name. Each 
 
 The following "BrainStack" table, and subtables "RawSlices" and "ProcessedSlices" encompass the computational side of the pipeline. "BrainStack" contains all needed metainformation on a stack before being entered into the atlas pipeline. The slice subtables contain information on where image files are stored on my butt for easy retrieval.
 
+[Link](https://github.com/ActiveBrainAtlas/Datajoint_Interface/blob/master/project_schemas/atlas_schema_python_v3/creator_atlas_v3.ipynb) to the code where the tables are defined.
+
 ![Image](images/atlas_schema_v2_long.png)
 
 ## All current stacks

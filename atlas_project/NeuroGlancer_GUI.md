@@ -1,6 +1,13 @@
 # Projects for the NeuroGlancer computing project
-## Milestone 1 - Correction of alignment of reference atlas to new brain
-## Milestone 2 - Addition of new annotation by an expert anatomist
+## Milestone 1 - Manual global alignment of reference atlas to new brain
+Load an unprocessed brain.  
+Add the reference atlas with affine procedures (translation, rotation, sheer)
+Translation by "grabbing" any landmark, rotation
+## Milestone 2 - Correction of alignment of reference atlas to new brain
+Load a brain that has been processed for alignment with the refernce atlas. 
+
+## Milestone 3 - Addition of new annotation by an expert anatomist
+Load a brain.  
 Add a new structure, which is labeled as a landmark.  
 This is performed by drawing a contour to every relevant section in the stack of brain slices.  
 Each successive section shows a shadow version of the previous contour for purposes of aiding the anatomist.  

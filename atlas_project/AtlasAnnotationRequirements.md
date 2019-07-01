@@ -35,6 +35,8 @@ Enables the user to perform a global alignment of the atlas to the brain.
 ### Milestone 2 - Correction of alignment of reference atlas to new brain
 Enables the use to correct the alignment by performing local deformations at selected scales.
 
+See storyboard here: https://drive.google.com/open?id=16XfhqO40v09AzYaBeQ__gHAnqX_T0BDtB68lqKFFisg
+
 * Select a landmark for correction.  
 * Permit correction of contours or contour segments for individual slices.  
 * Correction tool must allow affine correction (translation, rotation, sheer) to the one landmark.  

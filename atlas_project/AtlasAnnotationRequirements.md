@@ -11,7 +11,7 @@ The goal of the atlas annotation project is to create a system for storing, view
 
 ## Work-Flow
 
-<div style="width: 960px; height: 720px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:960px; height:720px" src="https://www.lucidchart.com/documents/embeddedchart/1c75b2c8-f864-4aae-b818-6416fc36d51c" id="OPlvNifj2V2z"></iframe></div>
+[LucidChart Diagrams](https://www.lucidchart.com/documents/embeddedchart/1c75b2c8-f864-4aae-b818-6416fc36d51c)
 
 The sequence of steps 
 

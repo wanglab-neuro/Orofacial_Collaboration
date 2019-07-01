@@ -1,12 +1,16 @@
 # Projects for the NeuroGlancer computing project
 ## Milestone 1 - Manual global alignment of reference atlas to new brain
 Load an unprocessed brain.  
-Add the reference atlas with affine procedures (translation, rotation, sheer).  
+Add the reference atlas with affine procedures (translation, rotation, sheer) that are common to all landmarks.  
 Display sections in 2-D with countours of landmarks and a 3-D representation.  
-Translation by "grabbing" any landmark or by six "hot keys" (X="q","w"; Y="a","s"; Z="z","x"); sheer by six "hot keys"(DX="e","r"; DY="d","f"; DZ="c","v"); and rotation by six "hot keys"(pitch="t","y"; yaw="g","h"; rill="b","n"), 
+Translation by "grabbing" any landmark or by six "hot keys" (X="q","w"; Y="a","s"; Z="z","x"); sheer by six "hot keys"(DX="e","r"; DY="d","f"; DZ="c","v"); and rotation by six "hot keys"(pitch="t","y"; yaw="g","h"; rill="b","n").  
 ## Milestone 2 - Correction of alignment of reference atlas to new brain
-Load a brain that has been processed for alignment with the reference atlas. 
-
+Load a brain that has been processed for alignment with the reference atlas.   
+Select a landmark for correction.  
+Permit correction of contours or contour segments for individual slices.  
+Correction tool must allow affine correction (translation, rotation, sheer) to the one landmark.  
+Correction tool must allow distorion of the shape of the landmark; note suggested "inner/outer" circle tool.  
+Display sections in 2-D with countours of landmarks and a 3-D representation.   
 ## Milestone 3 - Addition of new annotation by an expert anatomist
 Load a brain.  
 Add a new structure, which is labeled as a landmark.  
@@ -16,4 +20,4 @@ As the contour is drawn in the projections that corresponds to the orientation o
 Upon completion of labeling, generate full 3-D (possibly with a delay to reflect communication and computational times) and display.  
 Permit correction of contours or contour segments for individual slices. 
 Permit notes per new structure.
-## Milestone 3 - Labeling of markers
+## Milestone 4 - Labeling of markers

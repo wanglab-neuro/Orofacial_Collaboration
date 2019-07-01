@@ -7,7 +7,7 @@ The goal of the atlas annotation project is to create a system for storing, view
 * System will be able to either as a local installation, in a particular lab, or as a web based installation, using AWS resources.
 
 ## DataJoint Schemas
-   Can be found [here](XXX)
+   Can be found [here](https://github.com/ActiveBrainAtlas/Datajoint_Interface/blob/master/project_schemas/atlas_schema_python_v3/creator_atlas_v3.ipynb)
 
 ## Work-Flow
 The sequence of steps 
@@ -25,7 +25,7 @@ We break the development of this project into milestones. The goal is to focus o
 Enables the user to perform a global alignment of the atlas to the brain. 
 
 * Display sections in 2-D with countours of landmarks and a 3-D representation.  
-* Translation by performing "click-and-deag" or by "hot keys": (X="q","w"; Y="a","s"; Z="z","x"); 
+* Translation by performing "click-and-deag" or by "hot keys": (X="q"(left),"w"(right); Y="a"(up),"s"(down); Z="z"(higher),"x"(lower); 
 * Shear by six "hot keys"(DX="e","r"; DY="d","f"; DZ="c","v"); 
 * Rotation by six "hot keys"(pitch="t","y"; yaw="g","h"; rill="b","n").  
 

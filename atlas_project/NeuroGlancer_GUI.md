@@ -1,10 +1,11 @@
 # Projects for the NeuroGlancer computing project
 ## Milestone 1 - Manual global alignment of reference atlas to new brain
 Load an unprocessed brain.  
-Add the reference atlas with affine procedures (translation, rotation, sheer)
-Translation by "grabbing" any landmark, rotation
+Add the reference atlas with affine procedures (translation, rotation, sheer).  
+Display sections in 2-D with countours of landmarks and a 3-D representation.  
+Translation by "grabbing" any landmark or by six "hot keys" (X="q","w"; Y="a","s"; Z="z","x"); sheer by six "hot keys"(DX="e","r"; DY="d","f"; DZ="c","v"); and rotation by six "hot keys"(pitch="t","y"; yaw="g","h"; rill="b","n"), 
 ## Milestone 2 - Correction of alignment of reference atlas to new brain
-Load a brain that has been processed for alignment with the refernce atlas. 
+Load a brain that has been processed for alignment with the reference atlas. 
 
 ## Milestone 3 - Addition of new annotation by an expert anatomist
 Load a brain.  

@@ -22,7 +22,6 @@ class Perfusion(dj.Manual): # Everyone should be doing the same type of perfusio
     -> Mouse                        # One injection per mouse
     ----------
     injection_date  : date          # (date) what day was the injection performed
-
     post_fixation_condition_hours  : int   # (int) How long kept in fix (overnight)
     percent_sucrose_of_fix         : int   # (int) 10 or 20 percent for CSHL stuff
 
@@ -41,7 +40,9 @@ class Injection(dj.Manual): # Viral injections
     -> Mouse                        # One injection per mouse
     injection_number : int          # iterative, how many injections have already been performed
     -------
-    injection_date  : date          # (date) what day was the injection performed
+    DK*injection_location, M-L  : double          # (medial-lateral coordinates) where was the injection performed
+    DK*injection_location, R-C  : double          # (rostral-caudal coordinates) where was the injection performed
+    DK*injection_location, D-V  : double          # (dorsal - medial coordinates) where was the injection performed    injection_date  : date          # (date) what day was the injection performed
     injection_type  : varchar(30)   # (Str) what kind of tracer/injection (flourescent?)
     injection_length: int           # UNSURE. Assumed: the length of time the virus was allowed to propagate
     

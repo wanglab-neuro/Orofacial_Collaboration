@@ -13,7 +13,7 @@ The following "BrainStack" table, and subtables "RawSlices" and "ProcessedSlices
 
 ## All current stacks
 
-Information on how to access all tables in the database as well as download all images from AWS S3 can be found [in this Jupyter Notebook.](https://github.com/ActiveBrainAtlas/Datajoint_Interface/blob/master/project_schemas/atlas_schema_python/data_accessor_atlas_v4.ipynb)
+Information on how to access all tables in the database as well as download all images from AWS S3 can be found [in this Jupyter Notebook.](https://github.com/ActiveBrainAtlas/Datajoint_Interface/blob/master/project_schemas/atlas_schema/data_accessor_atlas_v4.ipynb)
 
 Entries in all tables can be easily viewed by registered users using [Helium](http://ucsd-demo-helium.datajoint.io/login?from_user=alex&from_host=ucsd-demo-db.datajoint.io&from_path=%2Ftables%2Fcommon_u19_database%2Fbrain) hosted at `ucsd-demo-db.datajoint.io`.
 
